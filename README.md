@@ -1,6 +1,6 @@
 # Forum
 
-### Sammy MERAZGA & Soilihi M'MADI #
+### Sammy MERAZGA & Soilihi M'MADI ###
 
 ### Languages & Tools 🛠
 
