@@ -1,3 +1,5 @@
 <?php
-  $suzume;
+
+echo "Hello World!";
+
 ?>
