@@ -1,3 +1,5 @@
+<img id="legendsCorp" src="./assets/images/legendsCorp.png" alt="image homePage"/></img>
+
 <div class="container">
   <div class="categories">
     <div class="category">
