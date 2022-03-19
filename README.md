@@ -1,5 +1,7 @@
 ### Sammy MERAZGA & Soilihi M'MADI 🤝
 
+<img width="1512" alt="homePage" src="https://user-images.githubusercontent.com/78353572/159131824-e63bf599-a99b-483b-89ff-04699896ab56.png">
+
 ### Languages & Tools 🛠
 
 ![PHP](https://img.shields.io/badge/-php-05122A?style=flat&logo=php)&nbsp;
@@ -8,16 +10,20 @@
 ![JavaScript](https://img.shields.io/badge/-Javascript-05122A?style=flat&logo=javascript)&nbsp;
 
 ![MySQL](https://img.shields.io/badge/-MySQL-05122A?style=flat&logo=mysql&logoColor=white)&nbsp;
+![PHPMyAdmin](https://img.shields.io/badge/-PHPMyAdmin-05122A?style=flat&logo=phpmyadmin&logoColor=white)&nbsp;
 
 ![Git](https://img.shields.io/badge/-Git-05122A?style=flat&logo=git)&nbsp;
 ![GitHub](https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github)&nbsp;
-![Linux](https://img.shields.io/badge/-Linux-05122A?style=flat&logo=linux&logoColor=white)&nbsp;
-![Ubuntu](https://img.shields.io/badge/-ubuntu-05122A?style=flat&logo=ubuntu)&nbsp;
+
 ![Visual Studio Code](https://img.shields.io/badge/-Visual%20Studio%20Code-05122A?style=flat&logo=visual-studio-code&logoColor=007ACC)&nbsp;
+![Postman](https://img.shields.io/badge/-Postman-05122A?style=flat&logo=postman)&nbsp;
+![MAMP](https://img.shields.io/badge/-MAMP-05122A?style=flat&logo=mamp)&nbsp;
+![Apache](https://img.shields.io/badge/-Apache-05122A?style=flat&logo=apache)&nbsp;
 
 # Mickaël Martin Nevot 👋
 
-# Nommer le fichier : Merazga Sammy - M'Madi Soilihi
-# Projet : https://www.mickael-martin-nevot.com/institut-g4/php/?:s11-projet.pdf
+### Nommer le fichier : Merazga Sammy - M'Madi Soilihi
 
-# Forum minimal : https://www.mickael-martin-nevot.com/institut-g4/php/?:s11-forum-minimal-php-et-mysql.pdf
+## Projet : https://www.mickael-martin-nevot.com/institut-g4/php/?:s11-projet.pdf
+
+## Forum minimal : https://www.mickael-martin-nevot.com/institut-g4/php/?:s11-forum-minimal-php-et-mysql.pdf
