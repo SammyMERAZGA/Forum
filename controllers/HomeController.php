@@ -1,21 +1,21 @@
 <?php
 if(!isset($_REQUEST['action']))
 {
-	$_REQUEST['action'] = 'forum';
+	$_REQUEST['action'] = 'home';
 }
 $action = $_REQUEST['action'];
 
 switch($action)
 {
-  case 'forum':
+  case 'home':
   {
-    include("view/forum.php");
+    include("views/home.php");
     break;
   }
 
   default :
   {
-    include("view/forum.php");
+    include("views/home.php");
     break;
   }
 }

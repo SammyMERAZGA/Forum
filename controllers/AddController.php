@@ -8,13 +8,13 @@ switch($action)
 {
   case 'add':
     {
-      include("view/add.php");
+      include("views/add.php");
       break;
     }
 
   default :
   {
-    include("view/add.php");
+    include("views/add.php");
     break;
   }
 }

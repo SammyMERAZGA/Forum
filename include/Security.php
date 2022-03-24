@@ -1,6 +1,6 @@
 <?php
 
-require_once './model/DataSource.php';
+require_once './models/database/DataSource.php';
 
 session_start();
 
@@ -13,7 +13,7 @@ function userAccountCerification($pseudo, $mdp) {
     if ($bonPass)
     {
       return true;
-    } 
+    }
     else
     {
       return false;
@@ -67,7 +67,7 @@ function closeUserSession() {
 //      if(isset($_SESSION['timestamp'])){ // si $_SESSION['timestamp'] existe
 //              if($_SESSION['timestamp'] + 900 > time()){
 //                     $_SESSION['timestamp'] = time();
-//              }else{ 
+//              }else{
 //                  session_unset();
 //                  session_destroy();
 //              echo "<script language='JavaScript'>alert('Vous avez été déconnecté pour inactivité trop longue!')</script>";

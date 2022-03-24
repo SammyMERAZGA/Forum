@@ -3,7 +3,7 @@
 function formSelectDepuisRecordset($unLabel, $unNom, $id, $unRecordset, $tabIndex, $valeurOptionSelec = null)
 {
     $codeHTML = '<label for="' . $id . '">' . $unLabel . '</label>'
-      . '<select name="' . $unNom . '"id="' . $id . '"tabIndex ="' . $tabIndex . '">' . "\n";
+    . '<select name="' . $unNom . '"id="' . $id . '"tabIndex ="' . $tabIndex . '">' . "\n";
     $unRecordset->setFetchMode(PDO::FETCH_NUM);
     $ligne = $unRecordset->fetch();
     while ($ligne != false)
@@ -34,7 +34,7 @@ function formInputText($leLabel, $leNom, $id, $valeur, $taille, $longueurMax, $t
     }
     if($obligation==true)
     {
-      $codeHTML = $codeHTML . ' required="required" ';
+        $codeHTML = $codeHTML . ' required="required" ';
     }
     $codeHTML = $codeHTML . '/>';
 
@@ -66,7 +66,7 @@ function formInputPassword($leLabel, $leNom, $id, $valeur, $taille, $longueurMax
 
     if($obligation==true)
     {
-      $codeHTML = $codeHTML . ' required="required" ';
+        $codeHTML = $codeHTML . ' required="required" ';
     }
     $codeHTML = $codeHTML . '/>';
 

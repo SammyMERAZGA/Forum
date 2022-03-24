@@ -1,7 +1,7 @@
 <?php
 
 // session_start();
-require_once ("./model/DataSource.php");
+require_once ("./models/database/DataSource.php");
 require_once("./include/Bibliotheque.inc.php");
 require_once("./include/Security.php");
 
@@ -19,49 +19,49 @@ switch ($uc)
 {
   case 'add':
   {
-    include ('controller/AddController.php');
+    include ('controllers/AddController.php');
     break;
   }
 
   case 'forum':
   {
-    include ('controller/ForumController.php');
+    include ('controllers/ForumController.php');
     break;
   }
 
   case 'home':
   {
-    include ('controller/HomeController.php');
+    include ('controllers/HomeController.php');
     break;
   }
 
   case 'listPost':
   {
-    include ('controller/ListPostController.php');
+    include ('controllers/ListPostController.php');
     break;
   }
 
   case 'subscribe':
   {
-    include ('controller/SubscribeController.php');
+    include ('controllers/SubscribeController.php');
     break;
   }
 
   case 'login':
   {
-    include("controller/LoginController.php");
+    include("controllers/LoginController.php");
     break;
   }
 
   case 'about':
   {
-    include("controller/AboutController.php");
+    include("controllers/AboutController.php");
     break;
   }
 
   case 'account':
   {
-    include("controller/AccountController.php");
+    include("controllers/AccountController.php");
     break;
   }
 }

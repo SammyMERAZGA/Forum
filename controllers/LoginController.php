@@ -10,7 +10,7 @@ switch($action)
 {
   case 'demandeConnexion':
   {
-    include("view/authentication/login.php");
+    include("views/authentication/login.php");
     break;
   }
 
@@ -22,8 +22,8 @@ switch($action)
     if(!is_array( $user))
     {
       // ajouterErreur("Login ou mot de passe incorrect");
-      include("view/v_erreurs.php");
-      include("view/authentication/login.php");
+      include("views/error.php");
+      include("views/authentication/login.php");
     }
     else
     {
@@ -31,7 +31,7 @@ switch($action)
       $nom = $user['nom'];
       $prenom = $user['prenom'];
       // connecter($id,$nom,$prenom);
-      include("view/home.php");
+      include("views/home.php");
     }
     break;
   }
@@ -41,13 +41,13 @@ switch($action)
       // Code ajouté par moi. Sans cela les informations de sessions
       // ne sont pas supprimées lors d'une déconnexion.
       // deconnecter();
-      include("view/authentication/login.php");
+      include("views/authentication/login.php");
       break;
     }
 
   default :
   {
-    include("view/authentication/login.php");
+    include("views/authentication/login.php");
     break;
   }
 }

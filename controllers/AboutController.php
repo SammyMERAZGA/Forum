@@ -8,13 +8,13 @@ switch($action)
 {
   case 'about':
     {
-      include("view/about.php");
+      include("views/about.php");
       break;
     }
 
   default :
   {
-    include("view/about.php");
+    include("views/about.php");
     break;
   }
 }

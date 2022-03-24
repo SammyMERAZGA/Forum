@@ -9,13 +9,13 @@ switch($action)
 {
   case 'subscribe':
   {
-    include("view/authentication/subscribe.php");
+    include("views/authentication/subscribe.php");
     break;
   }
 
   default :
   {
-    include("view/authentication/subscribe.php");
+    include("views/authentication/subscribe.php");
     break;
   }
 }

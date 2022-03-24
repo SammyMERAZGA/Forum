@@ -1,20 +1,20 @@
 <?php
 if(!isset($_REQUEST['action'])){
-	$_REQUEST['action'] = 'account';
+	$_REQUEST['action'] = 'listPost';
 }
 $action = $_REQUEST['action'];
 
 switch($action)
 {
-  case 'account':
+  case 'listPost':
   {
-    include("view/account.php");
+    include("views/listPost.php");
     break;
   }
 
   default :
   {
-    include("view/account.php");
+    include("views/listPost.php");
     break;
   }
 }
