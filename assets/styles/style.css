@@ -36,14 +36,15 @@ li,
 nav li {
   list-style-type: none;
   border-top: 3px solid #274479;
+  padding: 1% 0%;
 }
 
 nav .table ul {
   margin: 0;
-  padding: 0;
   flex-direction: column;
   display: flex;
   text-align: center;
+  align-items: center;
 }
 
 nav {
@@ -70,7 +71,6 @@ li:hover {
 @media screen and (min-width: 560px) {
   nav .table ul {
     margin: 0px;
-    padding: 0px;
     flex-direction: row;
     justify-content: center;
   }
@@ -103,7 +103,8 @@ li:hover {
 /* SUBSCRIBE PAGE */
 
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+input[type="email"] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -114,12 +115,14 @@ input[type="password"] {
 }
 
 input[type="text"]:focus,
-input[type="password"]:focus {
+input[type="password"]:focus,
+input[type="email"]:focus {
   background-color: #ddd;
   outline: none;
 }
 
-.registerbtn {
+.registerbtn,
+#accountSubmit {
   background-color: #04aa6d;
   color: white;
   padding: 16px 20px;
@@ -217,6 +220,10 @@ input[type="password"]:focus {
   color: white;
 }
 
+.themes {
+  padding: 10px;
+}
+
 .theme {
   background-color: #e0eef7;
   padding: 15px;
@@ -225,11 +232,6 @@ input[type="password"]:focus {
   border-radius: 30px;
   display: flex;
   align-items: center;
-  justify-content: sapce-between;
-}
-
-.themes {
-  padding: 10px;
 }
 
 .logoTheme {
@@ -237,8 +239,33 @@ input[type="password"]:focus {
   height: 5%;
 }
 
+.theme > * {
+  margin: 0px 5px;
+}
+
 /* END HOME PAGE */
 
 /* ACCOUNT PAGE */
+
+.accountContainer {
+  padding: 20px 40px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+/* 
+#email {
+}
+
+#pseudo {
+}
+
+#newMdp {
+}
+
+#mdp {
+}
+
+.inputAccount {
+} */
 
 /* END ACCOUNT PAGE */

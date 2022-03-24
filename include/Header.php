@@ -20,11 +20,11 @@
 <nav>
 	<div class="table">
 		<ul>
-      <img id="logoNav" src="./assets/images/logoDbl.jpg" alt="Logo Legends Corp">
+			<img id="logoNav" src="./assets/images/logoDbl.jpg" alt="Logo Legends Corp">
 			<li>
 				<a href="index.php?uc=home&action=home">🏠 Accueil</a>
 			</li>
-			<li>
+ 			<li>
 				<a href="index.php?uc=about&action=about">👥 À propos</a>
 			</li>
 			<li>

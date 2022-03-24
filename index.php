@@ -3,8 +3,11 @@
 // session_start();
 require_once ("./model/DataSource.php");
 require_once("./include/Bibliotheque.inc.php");
+require_once("./include/Security.php");
 
-include("./include/Header.inc.php");
+$sessionOuverte = isOpenUserSession();
+$sessionAdmin = isAdminSesion();
+include("./include/Header.php");
 
 if (!isset($_REQUEST['uc'])) {
     $_REQUEST['uc'] = 'home';
@@ -63,6 +66,6 @@ switch ($uc)
   }
 }
 
-include("include/Footer.inc.php");
+include("include/Footer.php");
 ?>
 

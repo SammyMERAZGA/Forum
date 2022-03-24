@@ -9,7 +9,7 @@
         <div class="theme">
           <img class="logoTheme" src="assets/images/boule.png" alt="logoTheme"></img>
           <h3 class="themesTitle">Exemple 1</h3>
-          <p>X Mars 202X</p>
+          <p> X Mars 202X</p>
         </div>
         <div class="theme">
           <img class="logoTheme" src="assets/images/boule.png" alt="logoTheme"></img>
