@@ -1,4 +1,6 @@
 <?php
+require_once ("./models/Subcategory.php");
+
 if(!isset($_REQUEST['action']))
 {
 	$_REQUEST['action'] = 'home';
@@ -9,6 +11,7 @@ switch($action)
 {
   case 'home':
   {
+    $allCategory = getAllSubcategory();
     include("views/home.php");
     break;
   }
