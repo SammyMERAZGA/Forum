@@ -18,9 +18,29 @@ function inscription(/*$nickName, */$email, $password)
     exit();
   }
   return $resultat;
+  password_hash($password, PASSWORD_DEFAULT);
 }
 
 // Connexion
+function getInfosUser($email, $mdp)
+{
+  try
+  {
+    $connexion = SGBDConnect();
+
+    $requete = 'SELECT email, pseudo, lastname, firstname, admin ' .
+    'FROM user ' .
+    'WHERE email = "'. $email .'" AND password = "'. $mdp .'"';
+
+    $resultat = $connexion->query($requete);
+  }
+  catch (PDOException $e)
+  {
+      echo 'Erreur !: ' . $e->getMessage() . '<br />';
+      exit();
+  }
+  return ($resultat->rowCount() == 1);
+}
 
 // Mot de passe oublié (Bonus)
 

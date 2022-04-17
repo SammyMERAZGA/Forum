@@ -64,6 +64,12 @@ switch ($uc)
     include("controllers/AccountController.php");
     break;
   }
+
+  case 'logout':
+  {
+    include("controllers/LoginController.php");
+    break;
+  }
 }
 
 include("include/Footer.php");

@@ -12,6 +12,21 @@ switch($action)
     break;
   }
 
+  case 'updateUserInfos':
+    {
+      require_once './models/User.php';
+
+      $userId = $_SESSION['theUserId'];
+      $email = $_POST['e-mail'];
+      $lastname = $_POST['lastname'];
+      $firstname = $_POST['firstname'];
+      $pseudo = $_POST['pseudo'];
+      $newMdp = $_POST['newMdp'];
+
+      setUser($lastname, $firstname, $pseudo, $email, $newMdp, $userId);
+      break;
+    }
+
   default :
   {
     include("views/account.php");

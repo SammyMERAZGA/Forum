@@ -2,13 +2,13 @@
 
 require_once ("./models/database/DataSource.php");
 
-function userExist($pseudo)
+function userExist($email)
 {
   $connexion = SGBDConnect();
 
-  $requete = 'SELECT user_id, pseudo, admin, password'
+  $requete = 'SELECT user_id, email, admin, password'
           . ' FROM user'
-          . ' WHERE pseudo = "' . $pseudo . '"';
+          . ' WHERE email = "' . $email . '"';
 
   $resultat = $connexion->query($requete);
   $resultat->setFetchMode(PDO::FETCH_ASSOC);
@@ -17,13 +17,13 @@ function userExist($pseudo)
   return $ligne;
 }
 
-function getUserInfo($pseudo)
+function getUserInfo($email)
 {
   $connexion = SGBDConnect();
 
-  $requete = 'SELECT id_utilisateurs, id_groupes, pseudo, concat(nom, " ",prenom) as nomPrenom'
-          . ' FROM utilisateurs '
-          . ' WHERE pseudo = "' . $pseudo . '"';
+  $requete = 'SELECT user_id, email, lastname, firstname, pseudo '
+          . ' FROM user '
+          . ' WHERE email = "' . $email . '"';
 
   $resultat = $connexion->query($requete);
   $resultat->setFetchMode(PDO::FETCH_ASSOC);

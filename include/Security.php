@@ -1,15 +1,21 @@
 <?php
 
 require_once './models/database/DataSource.php';
+require_once './models/User.php';
 
 session_start();
 
-function userAccountCerification($pseudo, $mdp) {
+function userAccountCerification($email, $mdp) {
 
-  $bonPseudo = userExist($pseudo);
-  if ($bonPseudo)
+  $bonEmail = userExist($email);
+  $mdpHash = hash('sha256', $mdp);
+  $bonPass = false;
+  if ($bonEmail)
   {
-    $bonPass = password_verify($mdp, $bonPseudo['pass']);
+    if($mdpHash == $bonEmail['password'])
+    {
+      return $bonPass = true;
+    }
     if ($bonPass)
     {
       return true;
@@ -25,16 +31,16 @@ function userAccountCerification($pseudo, $mdp) {
   }
 }
 
-function openUserSession($pseudo) {
-  $_SESSION['userNickName'] = $pseudo;
+function openUserSession($email) {
+  // $_SESSION['theUserEmail'] = $email;
 
-  $userInfo = getUserInfo($pseudo);
+  $userInfo = getUserInfo($email);
 
   $_SESSION['theUserId'] = $userInfo['user_id'];
-  $_SESSION['theUserName'] = $userInfo['name'];
-  $_SESSION['theUserFirstName'] = $userInfo['firstname'];
-  $_SESSION['theUserNickName'] = $userInfo['nickname'];
   $_SESSION['theUserEmail'] = $userInfo['email'];
+  $_SESSION['theUserLastname'] = $userInfo['lastname'];
+  $_SESSION['theUserFirstname'] = $userInfo['firstname'];
+  $_SESSION['theUserPseudo'] = $userInfo['pseudo'];
   $_SESSION['theUserType'] = $userInfo['admin'];
 }
 

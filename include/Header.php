@@ -24,18 +24,24 @@
 			<li>
 				<a href="index.php?uc=home&action=home">🏠 Accueil</a>
 			</li>
- 			<li>
+			<li>
 				<a href="index.php?uc=about&action=about">👥 À propos</a>
 			</li>
 			<li>
 				<a href="index.php?uc=account&action=account">👨‍🎓 Mon profil</a>
 			</li>
-			<li>
+			<?php if(isset($_SESSION['theUserEmail'])) {
+				echo '<li>
+					<a href="index.php?uc=logout&action=logout">🔓 Déconnexion</a>
+				</li>';
+			} else {
+				echo '<li>
+					<a href="index.php?uc=login&action=login">🔒 Connexion</a>
+				</li>';
+				echo '<li>
 				<a href="index.php?uc=subscribe&action=subscribe">🔐 Inscription</a>
-			</li>
-      <li>
-        <a href="index.php?uc=login&action=login">🔐 Connexion</a>
-      </li>
+				</li>';
+			} ?>
 		</ul>
 	</div>
 </nav>

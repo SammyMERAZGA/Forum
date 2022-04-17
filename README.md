@@ -2,6 +2,8 @@
 
 <img width="1512" alt="homePage" src="https://user-images.githubusercontent.com/78353572/159131824-e63bf599-a99b-483b-89ff-04699896ab56.png">
 
+### UpdateUserInfo, UpdatePassword, MyAccount Navbar, HomePage and Footer. 👉 2h
+
 ### Languages & Tools 🛠
 
 ![PHP](https://img.shields.io/badge/-php-05122A?style=flat&logo=php)&nbsp;
