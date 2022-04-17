@@ -45,6 +45,17 @@ switch($action)
       break;
     }
 
+    case 'valideInscription':
+      {
+        $email = $_REQUEST["email"];
+        $mdp = $_REQUEST["psw"];
+        require_once("models/Authentication.php");
+        inscription($email, $mdp);
+        $action = $_REQUEST["action"];
+        include("views/authentication/login.php");
+        break;
+      }
+
   default :
   {
     include("views/authentication/login.php");

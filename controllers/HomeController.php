@@ -18,6 +18,7 @@ switch($action)
 
   default :
   {
+    $allCategory = getAllSubcategory();
     include("views/home.php");
     break;
   }

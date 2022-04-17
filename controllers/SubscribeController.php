@@ -1,4 +1,5 @@
 <?php
+require_once('./models/Authentication.php');
 if(!isset($_REQUEST['action']))
 {
 	$_REQUEST['action'] = 'subscribe';

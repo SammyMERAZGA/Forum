@@ -3,13 +3,13 @@
 require_once ("./models/database/DataSource.php");
 
 // add md5 for hash password
-function inscription($name, $firstName, $nickName, $email, $password)
+function inscription(/*$nickName, */$email, $password)
 {
   try
   {
     $connexion = SGBDConnect();
 
-    $requete = 'INSERT INTO user (user_id, name, firstname, nickname, email, password, admin) VALUES ( NULL,\'' . $name . '\',\'' . $firstName . '\',\'' . $nickName . '\',\'' . $email . '\',\'' . $password . '\')';
+    $requete = 'INSERT INTO user (user_id, lastname, firstname, pseudo, email, password, admin) VALUES ( NULL, NULL, NULL, NULL,\'' . $email . '\',\'' . hash('sha256', $password) . '\', 0)';
     $resultat = $connexion->query($requete);
   }
   catch (PDOException $e)
