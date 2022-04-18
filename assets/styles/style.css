@@ -6,6 +6,10 @@ body {
   margin: 0%;
 }
 
+a:link {
+  text-decoration: none;
+}
+
 #legendsCorp {
   border-radius: 30%;
   display: block;
@@ -90,7 +94,7 @@ li:hover {
 
 /* FOOTER */
 
-/* footer {
+footer {
   justify-content: center;
   background-color: #274479;
   color: #fff;
@@ -99,14 +103,14 @@ li:hover {
   width: 100%;
   position: absolute;
   padding-top: 50px;
-} */
+}
 
-/* #teleportation {
+#teleportation {
   max-width: 6%;
   margin-bottom: 1%;
   border-radius: 50%;
   border: 2px solid #fefefe;
-} */
+}
 
 /* END FOOTER */
 
@@ -234,6 +238,12 @@ input[type="email"]:focus {
   padding: 10px;
 }
 
+.descriptionSubcategory {
+  font-style: italic;
+  font-size: small;
+  padding: 10px;
+}
+
 .theme {
   background-color: #e0eef7;
   padding: 15px;
@@ -262,7 +272,7 @@ input[type="email"]:focus {
   margin-left: 20%;
   margin-right: 20%;
 }
-/* 
+/*
 #email {
 }
 

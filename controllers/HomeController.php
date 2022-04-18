@@ -1,5 +1,6 @@
 <?php
 require_once ("./models/Subcategory.php");
+require_once ("./models/Category.php");
 
 if(!isset($_REQUEST['action']))
 {
@@ -11,14 +12,16 @@ switch($action)
 {
   case 'home':
   {
-    $allCategory = getAllSubcategory();
+    $allCategory = getAllCategory();
+    $allSubcategory = getAllSubcategory();
     include("views/home.php");
     break;
   }
 
   default :
   {
-    $allCategory = getAllSubcategory();
+    $allCategory = getAllCategory();
+    $allSubcategory = getAllSubcategory();
     include("views/home.php");
     break;
   }

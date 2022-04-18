@@ -6,21 +6,28 @@ require_once ("./controllers/HomeController.php")
 <div class="container">
   <div class="categories">
     <div class="category">
-      <div class="categoryTop">
-        <img class="imgCategory" src="assets/images/dbzGogeta.png" alt="image categorie"></img>
-        <h2 class="categoryTitle">Title 1</h2>
-      </div>
+        <?php
+          foreach($allCategory as $category)
+          {
+            echo '<div class="categoryTop">';
+            echo '<img class="imgCategory" src="' . $category['image']  . '" alt="Image catégorie"></img>';
+            echo '<h2 class="categoryTitle">' . $category['name'] . '</h2>';
+            echo '</div>';
+        ?>
       <div class="themes">
           <?php
-          foreach($allCategory as $category){
-              echo '<div class="theme">';
-              echo '<img class="logoTheme" src="assets/images/boule.png" alt="logoTheme"></img>';
-              echo '<h3 class="themesTitle">' . $category['title'] . '</h3>';
-              echo '<div><p class="description">'.$category['description'].'</p></div>';
-              echo '</div>';
+          foreach($allSubcategory as $subcategory){
+            if ($category['category_id'] == $subcategory['category_id']) {
+                echo '<a class="theme" href="index.php?uc=listPost&action=listPost&subcategoryId=' . $subcategory['subcategory_id'] . '">';
+                echo '<img class="logoTheme" src="assets/images/boule.png" alt="logoTheme"></img>';
+                echo '<h3 class="themesTitle">' . $subcategory['title'] . '</h3>';
+                echo '<div><p class="descriptionSubcategory">'.$subcategory['description'].'</p></div>';
+                echo '</a>';
+            }
           }
           ?>
       </div>
+      <?php } ?>
     </div>
   </div>
 </div>

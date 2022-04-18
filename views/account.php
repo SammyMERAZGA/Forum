@@ -26,4 +26,22 @@
       <button id="accountSubmit" name="accountSubmit" class="inputAccount" type="submit" >Modifier les informations</button>
     </div>
   </form>
+  <hr>
+  <form class="accountFormPwd" method="POST">
+    <div class="accountContainer">
+      <h2>Modifier votre mot de passe</h2>
+
+      <label for="mdp">Mot de passe actuel*</label>
+      <input id="mdp" name="mdp" class="inputAccount" type="password" placeholder="confirmer les modification" required>
+
+      <label for="newMdp">Nouveau mot de passe</label>
+      <input id="newMdp" name="newMdp" class="inputAccount" type="password" placeholder="Nouveau mot de passe">
+
+      <label for="newMdpConfirm">Confirmer le mot de passe</label>
+      <input id="newMdpConfirm" name="newMdpConfirm" class="inputAccount" type="password" placeholder="Confirmer le nouveau mot de passe">
+
+      <input type="hidden" id="action" name="action" value="updateUserPwd">
+      <button id="accountSubmit" name="accountSubmit" class="inputAccount" type="submit" >Modifier le mot de passe</button>
+    </div>
+  </form>
 </div>

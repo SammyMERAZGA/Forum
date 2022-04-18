@@ -17,13 +17,13 @@ function getAllSubcategory()
 }
 
 // GET
-function getSubategory($subcategoryId)
+function getSubcategory($subcategoryId)
 {
   $connexion = SGBDConnect();
 
   $requete = 'SELECT subcategory_id, title, description, category_id, user_id'
           . ' FROM subcategory'
-          . ' WHERE subcategory_id = "' .$subcategoryId. '"';
+          . ' WHERE subcategory_id = "' . $subcategoryId . '"';
 
   $resultat = $connexion->query($requete);
   $resultat->setFetchMode(PDO::FETCH_ASSOC);
@@ -56,7 +56,7 @@ return $resultat;
 
 // add admin verification
 // DELETE only admin
-function deleteCategory($subategoryId)
+function deleteSubcategory($subategoryId)
 {
   try
   {

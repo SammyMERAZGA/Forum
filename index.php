@@ -7,6 +7,7 @@ require_once("./include/Security.php");
 
 $sessionOuverte = isOpenUserSession();
 $sessionAdmin = isAdminSesion();
+
 include("./include/Header.php");
 
 if (!isset($_REQUEST['uc'])) {
@@ -72,6 +73,7 @@ switch ($uc)
   }
 }
 
-include("include/Footer.php");
+include("./include/Footer.php");
+
 ?>
 
