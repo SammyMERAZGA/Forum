@@ -94,7 +94,9 @@ li:hover {
 
 /* FOOTER */
 
-footer {
+/* footer {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   background-color: #274479;
   color: #fff;
@@ -110,7 +112,7 @@ footer {
   margin-bottom: 1%;
   border-radius: 50%;
   border: 2px solid #fefefe;
-}
+} */
 
 /* END FOOTER */
 
@@ -212,7 +214,7 @@ input[type="email"]:focus {
 
 .category {
   background-color: #3a5992;
-  margin: 5px;
+  margin: 20px 5px;
   color: black;
   padding: 5px 0px;
   border-radius: 30px;
@@ -222,11 +224,14 @@ input[type="email"]:focus {
   display: flex;
   align-items: center;
   padding-left: 14px;
+  margin: 15px 0px;
 }
 
 .imgCategory {
   width: 5%;
   height: 5%;
+  border: black solid 1px;
+  border-radius: 25px;
 }
 
 .categoryTitle {
@@ -289,3 +294,38 @@ input[type="email"]:focus {
 } */
 
 /* END ACCOUNT PAGE */
+
+/* LIST POST PAGE */
+
+.listPostTop {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px 5px;
+  background-color: #274479;
+  border-radius: 30px;
+  color: white;
+}
+
+.listPost {
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  color: white;
+  margin: 20px 5px;
+  background-color: #274479;
+  padding: 20px;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  margin: 10px;
+  background-color: #e0eef7;
+  color: black;
+  padding: 15px;
+}
+
+/* END LIST POST PAGE */

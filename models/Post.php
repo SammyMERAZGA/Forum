@@ -11,7 +11,7 @@ function getAllPost()
           . ' ON user.user_id = post.user_id'
           . ' INNER JOIN category'
           . ' ON post.category_id = category.category_id'
-          . ' ODER BY post_date';
+          . ' ORDER BY post_date';
 
   $resultat = $connexion->query($requete);
   $resultat->setFetchMode(PDO::FETCH_ASSOC);
@@ -30,7 +30,7 @@ function getPost($postId, $userId)
           . ' ON post.category_id = category.category_id'
           . ' WHERE post_id = "' . $postId . '"'
           . ' AND user_id = "' . $userId . '"'
-          . ' ODER BY post_date';
+          . ' ORDER BY post_date';
 
   $resultat = $connexion->query($requete);
   $resultat->setFetchMode(PDO::FETCH_ASSOC);

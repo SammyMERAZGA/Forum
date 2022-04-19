@@ -1,16 +1,13 @@
-<?php
-require_once ("./controllers/HomeController.php")
-?>
 <img id="legendsCorp" src="./assets/images/legendsCorp.png" alt="image homePage"/></img>
 
 <div class="container">
   <div class="categories">
-    <div class="category">
         <?php
           foreach($allCategory as $category)
           {
+            echo '<div class="category">';
             echo '<div class="categoryTop">';
-            echo '<img class="imgCategory" src="' . $category['image']  . '" alt="Image catégorie"></img>';
+            echo '<img class="imgCategory" src="' . $category['image'] . '" alt="Image catégorie"></img>';
             echo '<h2 class="categoryTitle">' . $category['name'] . '</h2>';
             echo '</div>';
         ?>
@@ -27,7 +24,7 @@ require_once ("./controllers/HomeController.php")
           }
           ?>
       </div>
-      <?php } ?>
     </div>
+      <?php } ?>
   </div>
 </div>

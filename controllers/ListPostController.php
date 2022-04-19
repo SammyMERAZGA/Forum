@@ -1,5 +1,6 @@
 <?php
 require_once ("./models/Subcategory.php");
+require_once("./models/Post.php");
 
 if(!isset($_REQUEST['action'])){
   $_REQUEST['action'] = 'listPost';
@@ -11,6 +12,7 @@ switch($action)
   case 'listPost':
   {
     $subcategory = getSubcategory($_REQUEST['subcategoryId']);
+    // $allPost = getAllPost();
     include("views/listPost.php");
     break;
   }
