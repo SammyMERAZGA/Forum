@@ -27,10 +27,10 @@
 			<li>
 				<a href="index.php?uc=about&action=about">👥 À propos</a>
 			</li>
-			<li>
-				<a href="index.php?uc=account&action=account">👨‍🎓 Mon profil</a>
-			</li>
 			<?php if(isset($_SESSION['theUserEmail'])) {
+				echo '<li>
+					<a href="index.php?uc=account&action=account">👨‍🎓 Mon profil</a>
+				</li>';
 				echo '<li>
 					<a href="index.php?uc=logout&action=logout">🔓 Déconnexion</a>
 				</li>';

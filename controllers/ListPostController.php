@@ -12,7 +12,7 @@ switch($action)
   case 'listPost':
   {
     $subcategory = getSubcategory($_REQUEST['subcategoryId']);
-    // $allPost = getAllPost();
+    $allPosts = getAllPost();
     include("views/listPost.php");
     break;
   }
@@ -20,6 +20,7 @@ switch($action)
   default :
   {
     $subcategory = getSubcategory($_REQUEST['subcategoryId']);
+    $allPosts = getAllPost();
     include("views/listPost.php");
     break;
   }

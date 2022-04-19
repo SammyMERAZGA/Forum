@@ -1,53 +1,48 @@
 <div class="listPostTop">
 <?php
-  echo '<h3 class="themesTitle">' . $subcategory['title'] . '</h3>';
-  echo '<div><p class="descriptionSubcategory">'.$subcategory['description'].'</p></div>';
+  echo '<h1 class="themesTitle">' . $subcategory['title'] . '</h1>';
+  echo '<p class="italic">' . $subcategory['description'] . '</p>';
 ?>
 </div>
-<!-- <div class="listPost">
-  <?php 
-    // foreach($allPost as $post){
-    //   if($post['subcategory_id'] === $subcategory['subcategory_id']){
-      ?>
-    <div class="post">
-      <div class="userPost">
-        <?php
-        //  echo '<h3>'. $post['pseudo'] .'</h3>'; 
-         ?>
-      </div>
-      <div class="postMessage">
-        <?php 
-          // echo '<h2>'. $post['title'] .'</h2>';
-          // echo '<p>'. $post['message'] .'</p>';
-        ?>
-      </div>
-    </div>
-  <?php
-    //   }
-    // }
-  ?>
-</div> -->
+
 
 <div class="listPost">
   <div class="text-center">
-      <h1>Liste des postes</h1>
+      <h1>Liste des posts</h1>
   </div>
   <div class="post">
-    <div class="userPost">
-      <h2>Pseudo 1</h2>
-    </div>
+  <?php
+    foreach ($allPosts as $post) {
+            ?>
     <div class="postMessage">
-      <h3>Titre du post 1</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, ipsam expedita deleniti assumenda inventore itaque!</p>
+      <?php
+          echo '<img class="logoTheme" src="assets/images/boule.png" alt="logoTheme"></img>';
+            echo '<h1>'. $post['name'] .'</h1>'; ?>
     </div>
-  </div>
-  <div class="post">
     <div class="userPost">
-      <h2>Pseudo 2</h2>
+        <?php
+          echo '<p class="italicGrey">'. $post['pseudo'] .'</p>';
+            echo '<p class="italicGrey">'. $post['post_date'] .'</p>'; ?>
     </div>
-    <div class="postMessage">
-      <h3>Titre du post 2</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam aliquid assumenda facilis pariatur, dolore voluptatibus.</p>
-    </div>
+    <?php } ?>
   </div>
+
+<div class="container">
+  <hr>
+  <form class="accountForm" method="POST">
+    <div class="accountContainer">
+      <h1 class="text-center">Poster un sujet</h1>
+
+      <label for="titlePost">Titre du sujet</label>
+      <input id="titlePost" name="titlePost" class="inputAccount" type="text" placeholder="Entrez le titre de votre sujet" value="">
+
+      <label for="subjectPost">Votre sujet</label><br>
+      <textarea rows="30" name="subjectPost" for="subjectPost" type="text" class="subjectPost" placeholder="Rédigez le contenu de votre sujet."></textarea>
+
+      <input type="hidden" id="action" name="action" value="createPost">
+      <button id="accountSubmit" name="accountSubmit" class="inputAccount" type="submit" >Créer un sujet</button>
+    </div>
+  </form>
+</div>
+
 </div>
