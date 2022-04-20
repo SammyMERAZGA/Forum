@@ -1,47 +1,34 @@
-<div class="container">
+<div class="listPostTop">
+  <h1>Post 1</h1>
+</div>
+
+<div class="postMessage">
+  <img id="profilePic" src="https://vetref.fr/wp-content/uploads/2021/02/blank-profile-picture-973460_640.png" alt="profilePicture"></img>
+  <h1 id="pseudo">Pseudo</h1>
+  <p id="messageOfPost">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, commodi veritatis optio officiis voluptatibus ipsam placeat maxime soluta, dicta similique aliquam perferendis cupiditate est praesentium neque nam architecto eos reiciendis? Magni illum provident aliquid in vel eligendi impedit magnam veniam dolore rem ea architecto earum, temporibus autem sint fugit accusamus debitis culpa. Doloremque nulla asperiores ullam quibusdam, accusantium laboriosam odit veritatis expedita illo odio tenetur beatae, officiis atque neque, sed alias facere! Doloremque repellendus labore recusandae natus iste ut deserunt itaque culpa hic, voluptatem laboriosam soluta officia dolores. Rerum reprehenderit ex magnam assumenda numquam exercitationem unde? Quibusdam illum autem esse obcaecati placeat, architecto laboriosam quis, corrupti ipsa voluptas beatae qui nesciunt? Molestiae dolorum nostrum magni praesentium neque. Dignissimos vel sit expedita sed exercitationem amet maxime officiis, ducimus dolore rerum eligendi veritatis itaque eum optio animi iste odio quasi? Molestiae facere temporibus cupiditate nam ratione sequi ut, optio voluptas quisquam laudantium itaque voluptates voluptatum eligendi nobis ullam doloribus reprehenderit quae quo officiis sed cum illum aspernatur incidunt explicabo? Id exercitationem dignissimos dolore et tempore odio repellat earum modi illo fuga molestiae, cupiditate quod optio architecto laudantium explicabo labore saepe repudiandae cum omnis. Repellendus distinctio sint enim praesentium, quae assumenda cumque at! Voluptatem vel a aspernatur placeat, accusantium molestias recusandae atque sed quas explicabo. Sed laudantium voluptatibus rerum nihil quibusdam iusto id quod adipisci quis alias natus, voluptatum sunt quo, ipsa saepe cum necessitatibus veritatis illo quidem ut quasi voluptates nisi deleniti at? Voluptatibus ut voluptatem explicabo delectus perferendis, autem dolorum est unde in aliquam ex! Veniam eligendi, non aspernatur nobis sunt neque at quia rerum autem ut voluptatum omnis quibusdam explicabo laudantium inventore reprehenderit quod corrupti culpa pariatur, eaque, quam error? Minus sed quos sint distinctio ut omnis, nulla recusandae facere magnam veniam, doloremque, dolore incidunt. Odit quisquam velit itaque et.</p>
+  <hr class="divider">
+</div>
+
+<div class="postMessage">
+  <img id="profilePic" src="https://vetref.fr/wp-content/uploads/2021/02/blank-profile-picture-973460_640.png" alt="profilePicture"></img>
+  <h1 id="pseudo">Pseudo</h1>
+  <p id="messageOfPost">Ceci est un commentaire</p>
+</div>
+
+<?php if(isset($_SESSION['theUserEmail'])) {
+echo '<div class="container">
+  <hr>
   <form class="accountForm" method="POST">
     <div class="accountContainer">
-      <h2>Modifier vos informations</h2>
+      <h1 class="text-center">Mettre un commentaire</h1>
 
-      <label for="e-mail">Email</label>
-      <input id="e-mail" name="e-mail" class="inputAccount" type="email" value="<?php echo($_SESSION['theUserEmail']); ?>">
+      <label for="commentary">Votre commentaire</label><br>
+      <textarea rows="30" name="commentary" for="commentary" type="text" class="subjectPost" placeholder="Rédigez votre commentaire."></textarea>
 
-      <label for="pseudo">Pseudo</label>
-      <input id="pseudo" name="pseudo" class="inputAccount" type="text" placeholder="Changer de pseudo" value="<?php echo($_SESSION['theUserPseudo']); ?>">
-
-      <label for="firstname">Prénom</label>
-      <input id="firstname" name="firstname" class="inputAccount" type="text" placeholder="Changer le prénom" value="<?php echo($_SESSION['theUserFirstname']); ?>">
-
-      <label for="lastname">Nom</label>
-      <input id="lastname" name="lastname" class="inputAccount" type="text" placeholder="Changer le nom de famille" value="<?php echo($_SESSION['theUserLastname']); ?>">
-
-
-      <!-- <label for="newMdp">Nouveau mot de passe</label>
-      <input id="newMdp" name="newMdp" class="inputAccount" type="password" placeholder="nouveau mot de passe">
-
-      <label for="mdp">Mot de passe actuel*</label>
-      <input id="mdp" name="mdp" class="inputAccount" type="password" placeholder="confirmer les modification" required> -->
-
-      <input type="hidden" id="action" name="action" value="updateUserInfos">
-      <button id="accountSubmit" name="accountSubmit" class="inputAccount" type="submit" >Modifier les informations</button>
+      <input type="hidden" id="action" name="action" value="addCommentary">
+      <button id="accountSubmit" name="commentarySubmit" type="submit">Envoyez le commentaire</button>
     </div>
   </form>
-  <hr>
-  <form class="accountFormPwd" method="POST">
-    <div class="accountContainer">
-      <h2>Modifier votre mot de passe</h2>
-
-      <label for="mdp">Mot de passe actuel*</label>
-      <input id="mdp" name="mdp" class="inputAccount" type="password" placeholder="confirmer les modification" required>
-
-      <label for="newMdp">Nouveau mot de passe</label>
-      <input id="newMdp" name="newMdp" class="inputAccount" type="password" placeholder="Nouveau mot de passe">
-
-      <label for="newMdpConfirm">Confirmer le mot de passe</label>
-      <input id="newMdpConfirm" name="newMdpConfirm" class="inputAccount" type="password" placeholder="Confirmer le nouveau mot de passe">
-
-      <input type="hidden" id="action" name="action" value="updateUserPwd">
-      <button id="accountSubmit" name="accountSubmit" class="inputAccount" type="submit" >Modifier le mot de passe</button>
-    </div>
-  </form>
-</div>
+</div>';
+}
+?>
