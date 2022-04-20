@@ -12,7 +12,7 @@ switch($action)
   case 'listPost':
   {
     $subcategory = getSubcategory($_REQUEST['subcategoryId']);
-    $allPosts = getAllPost();
+    $allPosts = getAllPostOfSubcategory($subcategory['subcategory_id']);
     include("views/listPost.php");
     break;
   }

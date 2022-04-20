@@ -17,7 +17,7 @@
     <div class="postMessage">
       <?php
           echo '<img class="logoTheme" src="assets/images/boule.png" alt="logoTheme"></img>';
-            echo '<h1>'. $post['name'] .'</h1>'; ?>
+            echo '<h1>'. $post['post_title'] .'</h1>'; ?>
     </div>
     <div class="userPost">
         <?php

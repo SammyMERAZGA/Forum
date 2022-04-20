@@ -6,11 +6,28 @@ function getAllPost()
 {
   $connexion = SGBDConnect();
 
-  $requete = 'SELECT post_id, post.name, message, DATE_FORMAT(post_date, \'%d/%m/%Y à %Hh%imin%ss\') AS post_date, pseudo, subcategory.title'
+  $requete = 'SELECT post_id, post.title as post_title, message, DATE_FORMAT(post_date, \'%d/%m/%Y à %Hh%imin%ss\') AS post_date, pseudo, subcategory.title as subcategory_title'
           . ' FROM post INNER JOIN user'
           . ' ON post.user_id = user.user_id'
           . ' INNER JOIN subcategory'
           . ' ON subcategory.subcategory_id = post.subcategory_id';
+
+  $resultat = $connexion->query($requete);
+  $resultat->setFetchMode(PDO::FETCH_ASSOC);
+  $lignes = $resultat->fetchAll(PDO::FETCH_ASSOC);
+  return $lignes;
+}
+
+function getAllPostOfSubcategory($subcategory_id)
+{
+  $connexion = SGBDConnect();
+
+  $requete = 'SELECT post_id, post.title as post_title, message, DATE_FORMAT(post_date, \'%d/%m/%Y à %Hh%imin%ss\') AS post_date, pseudo, post.subcategory_id'
+          . ' FROM post INNER JOIN user'
+          . ' ON post.user_id = user.user_id'
+          . ' INNER JOIN subcategory'
+          . ' ON subcategory.subcategory_id = post.subcategory_id'
+          . ' WHERE subcategory.subcategory_id = '. $subcategory_id ;
 
   $resultat = $connexion->query($requete);
   $resultat->setFetchMode(PDO::FETCH_ASSOC);
