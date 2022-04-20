@@ -16,18 +16,22 @@
             ?>
     <div class="postMessage">
       <?php
+          echo '<a class="theme" href="index.php?uc=post&action=post">';
           echo '<img class="logoTheme" src="assets/images/boule.png" alt="logoTheme"></img>';
-            echo '<h1>'. $post['post_title'] .'</h1>'; ?>
+          echo '<h1>'. $post['post_title'] .'</h1> </a>';?>
     </div>
     <div class="userPost">
         <?php
-          echo '<p class="italicGrey">'. $post['pseudo'] .'</p>';
-            echo '<p class="italicGrey">'. $post['post_date'] .'</p>'; ?>
+          echo '<p class="italicGrey alinea">'. $post['pseudo'] .'</p>';
+          echo '<p class="italicGrey alinea">'. $post['post_date'] .'</p>';
+          echo '<hr class="divider">';
+        ?>
     </div>
     <?php } ?>
   </div>
 
-<div class="container">
+<?php if(isset($_SESSION['theUserEmail'])) {
+echo '<div class="container">
   <hr>
   <form class="accountForm" method="POST">
     <div class="accountContainer">
@@ -39,10 +43,19 @@
       <label for="subjectPost">Votre sujet</label><br>
       <textarea rows="30" name="subjectPost" for="subjectPost" type="text" class="subjectPost" placeholder="Rédigez le contenu de votre sujet."></textarea>
 
-      <input type="hidden" id="action" name="action" value="createPost">
-      <button id="accountSubmit" name="accountSubmit" class="inputAccount" type="submit" >Créer un sujet</button>
+      <input type="hidden" id="action" name="action" value="addPost">
+      <button id="accountSubmit" name="postSubmit" type="submit" >Créer un sujet</button>
     </div>
   </form>
-</div>
+</div>';
+}
+?>
+
+<?php
+if($action === 'addPost'){
+  echo '<div><p>Votre post a bien été crée !</p></div>';
+  include("views/post.php");
+}
+?>
 
 </div>

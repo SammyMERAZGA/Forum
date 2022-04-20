@@ -42,6 +42,12 @@ switch ($uc)
     break;
   }
 
+  case 'post':
+  {
+    include ('controllers/PostController.php');
+    break;
+  }
+
   case 'subscribe':
   {
     include ('controllers/SubscribeController.php');

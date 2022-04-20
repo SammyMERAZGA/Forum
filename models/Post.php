@@ -54,6 +54,19 @@ function getPost($postId, $userId)
   return $ligne;
 }
 
+// INSERT
+function addPost($postName, $postText, $userId, $subcategoryId)
+{
+  $connexion = SGBDConnect();
+
+  $requete = 'INSERT INTO post '
+            . ' (title, message, post_date, user_id, subcategory_id)'
+            . ' VALUES ("' . $postName . '", "' . $postText . '", NOW(), "' . $userId . '", "' . $subcategoryId . '")';
+
+  $resultat = $connexion->query($requete);
+  return $resultat;
+}
+
 // SET (UPDATE) by user_id
 
 // UPDATE by user_id
