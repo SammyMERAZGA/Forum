@@ -42,6 +42,11 @@
 				<a href="index.php?uc=subscribe&action=subscribe">🔐 Inscription</a>
 				</li>';
 			} ?>
+			<?php if(isset($_SESSION['theUserEmail']) && getUserInfo($_SESSION['theUserEmail'])['admin'] == 1) {
+				echo '<li>
+					<a href="index.php?uc=admin&action=admin">🔧 Admin</a>
+				</li>';
+			} ?>
 		</ul>
 	</div>
 </nav>

@@ -27,6 +27,16 @@ switch($action)
       break;
     }
 
+  case 'admin': {
+    if ($_SESSION['theUserType'] == true)
+    {
+      include("views/admin.php");
+    }
+    else
+    {
+    }
+  }
+
   default :
   {
     include("views/account.php");

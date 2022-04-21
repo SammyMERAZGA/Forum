@@ -21,7 +21,7 @@ function getUserInfo($email)
 {
   $connexion = SGBDConnect();
 
-  $requete = 'SELECT user_id, email, lastname, firstname, pseudo '
+  $requete = 'SELECT user_id, email, lastname, firstname, pseudo, admin '
           . ' FROM user '
           . ' WHERE email = "' . $email . '"';
 

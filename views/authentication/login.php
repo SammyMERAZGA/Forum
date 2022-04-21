@@ -11,9 +11,9 @@
     <button type="submit" class="registerbtn" href="view/authentication/login.php" >Se connecter</button>
   </div>
 
-  <div class="container signin">
+  <!-- <div class="container signin">
     <a href="index.php">Mot de passe oublié</a>
-  </div>
+  </div> -->
 </form>
 
 <?php

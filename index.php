@@ -72,6 +72,12 @@ switch ($uc)
     break;
   }
 
+  case 'admin':
+    {
+      include("controllers/AdminController.php");
+      break;
+    }
+
   case 'logout':
   {
     include("controllers/LoginController.php");
