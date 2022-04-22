@@ -9,7 +9,17 @@
   if($action === 'deleteUser')
   {
     echo '<div>
-            <p>L\'utilisateur a bien été supprimer</p>
+            <p>L\'utilisateur a bien été supprimé</p>
+          </div>';
+  } else if($action === 'deletePost')
+  {
+    echo '<div>
+            <p>Le post a bien été supprimé</p>
+          </div>';
+  } else if($action === 'deleteCommentary')
+  {
+    echo '<div>
+            <p>Le commentaire a bien été supprimé</p>
           </div>';
   }
   foreach ($allUsers as $user) {
@@ -34,7 +44,7 @@
 ?>
   <div class="postMessage">
     <?php
-      echo '<a class="theme" href="index.php?uc=admin&action=deleteUser">';
+      echo '<a class="theme" href="index.php?uc=admin&action=deletePost&post_id='. $post['post_id'] .'">';
       echo '<img class="logoTheme" src="assets/images/blueTrash.png" alt="deleteUser"></img></a>';
       echo '<div class="alinea blue-text"><h3>Titre du post : '. $post['post_title'] .'</h3></div>';
       echo '<hr class="divider">';
@@ -50,7 +60,7 @@
 ?>
   <div class="postMessage">
     <?php
-      echo '<a class="theme" href="index.php?uc=admin&action=deleteUser">';
+      echo '<a class="theme" href="index.php?uc=admin&action=deleteCommentary&commentary_id='. $commentary['commentary_id'] .'">';
       echo '<img class="logoTheme" src="https://cdn-icons-png.flaticon.com/512/561/561125.png" alt="deleteUser"></img></a>';
       echo '<div class="alinea"><h3>Titre du post : '. $commentary['title'] .'</h3>';
       echo '<h3>Commentaire : '. $commentary['message'] .'</h3>';

@@ -6,6 +6,12 @@
 </div>
 
 <?php
+if($action === "addCommentary")
+{
+  echo '<div>
+          <p>Votre commentaire à bien été ajouté !</p>
+        </div>';
+}
 if($allCommentary){
 foreach($allCommentary as $commentary)
   {
@@ -32,12 +38,6 @@ foreach($allCommentary as $commentary)
 
 
 <?php
-if($action === "addCommentary")
-{
-  echo '<div>
-          <p>Votre commentaire à bien été ajouté !</p>
-        </div>';
-}
 if(isset($_SESSION['theUserEmail'])) {
 echo '<div class="container">
   <hr>

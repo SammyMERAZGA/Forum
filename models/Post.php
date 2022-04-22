@@ -87,7 +87,7 @@ function getAllCommentaries()
 {
   $connexion = SGBDConnect();
 
-  $requete = 'SELECT commentary.message, DATE_FORMAT(commentary_date, \'%d/%m/%Y à %Hh%imin%ss\') AS commentary_date, user.pseudo, post.title'
+  $requete = 'SELECT commentary_id ,commentary.message, DATE_FORMAT(commentary_date, \'%d/%m/%Y à %Hh%imin%ss\') AS commentary_date, user.pseudo, post.title'
           . ' FROM commentary INNER JOIN user'
           . ' ON user.user_id = commentary.user_id'
           . ' INNER JOIN post'
@@ -150,6 +150,40 @@ function nbCommentaries() {
   $ligne = $resultat->fetch(PDO::FETCH_ASSOC);
 
   return (int)$ligne['nbCommentaries'];
+}
+
+function deletePost($postId)
+{
+  try
+  {
+    $connexion = SGBDConnect();
+
+    $requete = 'DELETE FROM post WHERE post_id = ' . $postId . '';
+    $resultat = $connexion->query($requete);
+  }
+  catch (PDOException $e)
+  {
+    echo 'Erreur !: ' . $e->getMessage() . '<br />';
+    exit();
+  }
+  return $resultat;
+}
+
+function deleteCommentary($commentaryId)
+{
+  try
+  {
+    $connexion = SGBDConnect();
+
+    $requete = 'DELETE FROM commentary WHERE commentary_id = ' . $commentaryId . '';
+    $resultat = $connexion->query($requete);
+  }
+  catch (PDOException $e)
+  {
+    echo 'Erreur !: ' . $e->getMessage() . '<br />';
+    exit();
+  }
+  return $resultat;
 }
 
 ?>

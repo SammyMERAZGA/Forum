@@ -20,6 +20,26 @@ switch($action)
   case 'deleteUser': {
     deleteUser($_REQUEST['user_id']);
     $allUsers = getAllUsers();
+    $allPosts = getAllPost();
+    $allCommentaries = getAllCommentaries();
+    include("views/admin.php");
+    break;
+  }
+
+  case 'deletePost': {
+    deletePost($_REQUEST['post_id']);
+    $allUsers = getAllUsers();
+    $allPosts = getAllPost();
+    $allCommentaries = getAllCommentaries();
+    include("views/admin.php");
+    break;
+  }
+
+  case 'deleteCommentary': {
+    deleteCommentary($_REQUEST['commentary_id']);
+    $allUsers = getAllUsers();
+    $allPosts = getAllPost();
+    $allCommentaries = getAllCommentaries();
     include("views/admin.php");
     break;
   }
