@@ -35,16 +35,15 @@ function getAllPostOfSubcategory($subcategory_id)
   return $lignes;
 }
 
-function getPost($postId, $userId)
+function getPostOfUser($userId)
 {
   $connexion = SGBDConnect();
 
   $requete = 'SELECT post_id, title, message, DATE_FORMAT(post_date, \'%d/%m/%Y à %Hh%imin%ss\') AS post_date, user_id, pseudo, category_id'
-          . ' FROM user INNER JOIN post'
+          . ' FROM post INNER JOIN user'
           . ' ON user.user_id = post.user_id'
           . ' INNER JOIN category'
           . ' ON post.category_id = category.category_id'
-          . ' WHERE post_id = "' . $postId . '"'
           . ' AND user_id = "' . $userId . '"'
           . ' ORDER BY post_date';
 
@@ -65,6 +64,52 @@ function addPost($postName, $postText, $userId, $subcategoryId)
 
   $resultat = $connexion->query($requete);
   return $resultat;
+}
+
+function getAllCommentaryOfPost($post_id)
+{
+  $connexion = SGBDConnect();
+
+  $requete = 'SELECT commentary.message, DATE_FORMAT(commentary_date, \'%d/%m/%Y à %Hh%imin%ss\') AS commentary_date, user.pseudo'
+          . ' FROM commentary INNER JOIN user'
+          . ' ON user.user_id = commentary.user_id'
+          . ' INNER JOIN post'
+          . ' ON commentary.post_id = post.post_id'
+          . ' WHERE commentary.post_id = '. $post_id ;
+
+  $resultat = $connexion->query($requete);
+  $resultat->setFetchMode(PDO::FETCH_ASSOC);
+  $lignes = $resultat->fetchAll(PDO::FETCH_ASSOC);
+  return $lignes;
+}
+
+function addCommentary($message, $userId, $postId)
+{
+  $connexion = SGBDConnect();
+
+  $requete = 'INSERT INTO commentary '
+            . ' (message, commentary_date, user_id, post_id)'
+            . ' VALUES ("' . $message . '", NOW(), "' . $userId . '", "' . $postId . '")';
+
+  $resultat = $connexion->query($requete);
+  return $resultat;
+}
+
+function getPost($postId)
+{
+  $connexion = SGBDConnect();
+
+  $requete = 'SELECT post_id, post.title, message, DATE_FORMAT(post_date, \'%d/%m/%Y à %Hh%imin%ss\') AS post_date, post.user_id, pseudo, category_id'
+          . ' FROM post INNER JOIN user'
+          . ' ON user.user_id = post.user_id'
+          . ' INNER JOIN subcategory'
+          . ' ON post.subcategory_id = subcategory.subcategory_id'
+          . ' WHERE post_id = "' . $postId . '"';
+
+  $resultat = $connexion->query($requete);
+  $resultat->setFetchMode(PDO::FETCH_ASSOC);
+  $ligne = $resultat->fetch(PDO::FETCH_ASSOC);
+  return $ligne;
 }
 
 // SET (UPDATE) by user_id

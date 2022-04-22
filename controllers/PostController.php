@@ -11,6 +11,17 @@ switch($action)
 {
   case 'post':
   {
+    $post = getPost($_REQUEST['post_id']);
+    $allCommentary = getAllCommentaryOfPost($_REQUEST['post_id']);
+    include("views/post.php");
+    break;
+  }
+
+  case 'addCommentary':
+  {
+    $post = getPost($_REQUEST['post_id']);
+    addCommentary($_REQUEST['commentary'], $_SESSION['theUserId'], $_REQUEST['post_id']);
+    $allCommentary = getAllCommentaryOfPost($_REQUEST['post_id']);
     include("views/post.php");
     break;
   }

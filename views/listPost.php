@@ -16,7 +16,7 @@
             ?>
     <div class="postMessage">
       <?php
-          echo '<a class="theme" href="index.php?uc=post&action=post">';
+          echo '<a class="theme" href="index.php?uc=post&action=post&post_id='. $post['post_id'] .'">';
           echo '<img class="logoTheme" src="assets/images/boule.png" alt="logoTheme"></img>';
           echo '<h1>'. $post['post_title'] .'</h1> </a>';?>
     </div>
@@ -43,6 +43,7 @@ echo '<div class="container">
       <label for="subjectPost">Votre sujet</label><br>
       <textarea rows="30" name="subjectPost" for="subjectPost" type="text" class="subjectPost" placeholder="Rédigez le contenu de votre sujet."></textarea>
 
+      <input type="hidden" id="uc" name="uc" value="listPost">
       <input type="hidden" id="action" name="action" value="addPost">
       <button id="accountSubmit" name="postSubmit" type="submit" >Créer un sujet</button>
     </div>
@@ -54,7 +55,6 @@ echo '<div class="container">
 <?php
 if($action === 'addPost'){
   echo '<div><p>Votre post a bien été crée !</p></div>';
-  include("views/post.php");
 }
 ?>
 

@@ -21,8 +21,8 @@ switch($action)
   {
     $subcategory = getSubcategory($_REQUEST['subcategoryId']);
     $allPosts = getAllPostOfSubcategory($subcategory['subcategory_id']);
-    $addPost = addPost($_REQUEST['titlePost'], $_REQUEST['subjectPost'], $_SESSION['theUserId'], $_REQUEST['subcategoryId']);
-    include("views/addPost.php");
+    addPost($_REQUEST['titlePost'], $_REQUEST['subjectPost'], $_SESSION['theUserId'], $_REQUEST['subcategoryId']);
+    include("views/listPost.php");
     break;
   }
 
