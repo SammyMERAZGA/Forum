@@ -1,6 +1,8 @@
 <?php
 require_once ("./models/Subcategory.php");
 require_once ("./models/Category.php");
+require_once ("./models/User.php");
+require_once ("./models/Post.php");
 
 if(!isset($_REQUEST['action']))
 {
@@ -14,6 +16,9 @@ switch($action)
   {
     $allCategory = getAllCategory();
     $allSubcategory = getAllSubcategory();
+    $nbUser = nbUser();
+    $nbPosts = nbPosts();
+    $nbCommentaries = nbCommentaries();
     include("views/home.php");
     break;
   }
@@ -22,6 +27,9 @@ switch($action)
   {
     $allCategory = getAllCategory();
     $allSubcategory = getAllSubcategory();
+    $nbUser = nbUser();
+    $nbPosts = nbPosts();
+    $nbCommentaries = nbCommentaries();
     include("views/home.php");
     break;
   }

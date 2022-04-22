@@ -28,3 +28,24 @@
       <?php } ?>
   </div>
 </div>
+
+<hr class="divider">
+<h2 class="text-center">Statistiques de Legends Corp</h2>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>Nb d'utilisateurs</th>
+            <th>Nb de posts</th>
+            <th>Nb de commentaires</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><?php echo $nbUser; ?></td>
+            <td><?php echo $nbPosts; ?></td>
+            <td><?php echo $nbCommentaries; ?></td>
+        </tr>
+        <tbody>
+    </table>
+</div>

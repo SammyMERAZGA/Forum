@@ -17,6 +17,19 @@ function userExist($email)
   return $ligne;
 }
 
+function nbUser() {
+  $connexion = SGBDConnect();
+
+  $requete = 'SELECT COUNT(*) AS nbUser'
+          . ' FROM user';
+
+  $resultat = $connexion->query($requete);
+  $resultat->setFetchMode(PDO::FETCH_ASSOC);
+  $ligne = $resultat->fetch(PDO::FETCH_ASSOC);
+
+  return (int)$ligne['nbUser'];
+}
+
 function getUserInfo($email)
 {
   $connexion = SGBDConnect();

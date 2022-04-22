@@ -1,5 +1,6 @@
 <?php
 require_once("./models/User.php");
+require_once("./models/Post.php");
 
 if(!isset($_REQUEST['action'])){
 	$_REQUEST['action'] = 'account';
@@ -10,6 +11,8 @@ switch($action)
 {
   case 'admin': {
     $allUsers = getAllUsers();
+    $allPosts = getAllPost();
+    $allCommentaries = getAllCommentaries();
     include("views/admin.php");
     break;
   }
@@ -24,6 +27,8 @@ switch($action)
   default :
   {
     $allUsers = getAllUsers();
+    $allPosts = getAllPost();
+    $allCommentaries = getAllCommentaries();
     include("views/admin.php");
     break;
   }

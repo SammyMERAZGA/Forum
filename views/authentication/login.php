@@ -1,6 +1,7 @@
 <form method="POST">
   <div id="containerRegister">
     <h1 class="text-center">Connexion</h1>
+      <img class="loginPicture" src="assets/images/login.svg" alt="loginPicture"></img>
       <label for="email"><b>Email</b></label>
       <input type="text" placeholder="Entrer votre email" name="email" required>
 
