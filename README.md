@@ -1,6 +1,6 @@
 ### <div align="center"> Hello M. Martin-Nevot <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px"> </div> <br/>
 
-### Sammy MERAZGA & Soilihi M'MADI 🤝
+## Sammy MERAZGA & Soilihi M'MADI 🤝
 
 <img width="1512" alt="homePage" src="https://user-images.githubusercontent.com/78353572/159131824-e63bf599-a99b-483b-89ff-04699896ab56.png">
 
@@ -24,8 +24,8 @@
 
 ### Nommer le fichier : Merazga Sammy - M'Madi Soilihi
 
-### Projet : https://www.mickael-martin-nevot.com/institut-g4/php/?:s11-projet.pdf
+## Projet : https://www.mickael-martin-nevot.com/institut-g4/php/?:s11-projet.pdf
 
-### Forum minimal : https://www.mickael-martin-nevot.com/institut-g4/php/?:s11-forum-minimal-php-et-mysql.pdf
+## Forum minimal : https://www.mickael-martin-nevot.com/institut-g4/php/?:s11-forum-minimal-php-et-mysql.pdf
 
 <img alt="GIF" src="https://i.skyrock.net/7954/5337954/pics/2612608836_1.gif" />
