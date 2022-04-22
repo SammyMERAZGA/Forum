@@ -1,6 +1,6 @@
-### <div align="center"> Hello M. Martin-Nevot <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px"> </div> <br/>
+### <div align="center"> Hello M. Martin-Nevot <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px"> <br/>
 
-## Sammy MERAZGA & Soilihi M'MADI 🤝
+## Sammy MERAZGA & Soilihi M'MADI 🤝 </div>
 
 <img width="1512" alt="homePage" src="https://user-images.githubusercontent.com/78353572/159131824-e63bf599-a99b-483b-89ff-04699896ab56.png">
 
