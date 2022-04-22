@@ -1,10 +1,10 @@
-### <div align="center"> Hello M. Martin-Nevot <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px"> <br/>
+### <div align="center"> Hello M. Martin-Nevot <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px"> <br/> </div>
 
-## Sammy MERAZGA & Soilihi M'MADI 🤝 </div>
+## <div align="center"> Sammy MERAZGA & Soilihi M'MADI 🤝 </div>
 
 <img width="1512" alt="homePage" src="https://user-images.githubusercontent.com/78353572/159131824-e63bf599-a99b-483b-89ff-04699896ab56.png">
 
-### Languages & Tools 🛠
+## <div align="center"> Languages & Tools 🛠 </div>
 
 ![PHP](https://img.shields.io/badge/-php-05122A?style=flat&logo=php)&nbsp;
 ![HTML](https://img.shields.io/badge/-html5-05122A?style=flat&logo=html5)&nbsp;
