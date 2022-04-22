@@ -15,8 +15,9 @@ switch($action)
   }
 
   case 'deleteUser': {
-    $user = deleteUser($_REQUEST['id']);
-    include("views/deleteUser.php");
+    deleteUser($_REQUEST['user_id']);
+    $allUsers = getAllUsers();
+    include("views/admin.php");
     break;
   }
 
