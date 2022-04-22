@@ -28,4 +28,4 @@
 
 ### Forum minimal : https://www.mickael-martin-nevot.com/institut-g4/php/?:s11-forum-minimal-php-et-mysql.pdf
 
-<img align="right" alt="GIF" src="https://i.skyrock.net/7954/5337954/pics/2612608836_1.gif" />
+<img align="center" alt="GIF" src="https://i.skyrock.net/7954/5337954/pics/2612608836_1.gif" />
