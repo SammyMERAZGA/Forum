@@ -2,7 +2,7 @@
 
 <div class="card">
   <div class="card-text">
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste saepe omnis reiciendis neque odit et natus aliquid dolores suscipit sunt?</p>
+    <p>Legends Corp est un forum où chacun est libre de parler du sujet qu'il souhaite principalement sur le jeu mobile Dragon Ball Legends ou tant que cela entre dans le thème mangas, animes et jeux vidéos. Bien évidemment, tout cela dans la courtoisie et le respect.</p>
   </div>
 </div>
 

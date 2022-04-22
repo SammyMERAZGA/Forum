@@ -83,6 +83,22 @@ function getAllCommentaryOfPost($post_id)
   return $lignes;
 }
 
+function getAllCommentaries()
+{
+  $connexion = SGBDConnect();
+
+  $requete = 'SELECT commentary.message, DATE_FORMAT(commentary_date, \'%d/%m/%Y à %Hh%imin%ss\') AS commentary_date, user.pseudo, post.title'
+          . ' FROM commentary INNER JOIN user'
+          . ' ON user.user_id = commentary.user_id'
+          . ' INNER JOIN post'
+          . ' ON commentary.post_id = post.post_id';
+
+  $resultat = $connexion->query($requete);
+  $resultat->setFetchMode(PDO::FETCH_ASSOC);
+  $lignes = $resultat->fetchAll(PDO::FETCH_ASSOC);
+  return $lignes;
+}
+
 function addCommentary($message, $userId, $postId)
 {
   $connexion = SGBDConnect();
@@ -112,10 +128,28 @@ function getPost($postId)
   return $ligne;
 }
 
-// SET (UPDATE) by user_id
+function nbPosts() {
+  $connexion = SGBDConnect();
 
-// UPDATE by user_id
+  $requete = 'SELECT COUNT(*) AS nbPosts FROM post';
 
-// DELETE by user_id
+  $resultat = $connexion->query($requete);
+  $resultat->setFetchMode(PDO::FETCH_ASSOC);
+  $ligne = $resultat->fetch(PDO::FETCH_ASSOC);
+
+  return (int)$ligne['nbPosts'];
+}
+
+function nbCommentaries() {
+  $connexion = SGBDConnect();
+
+  $requete = 'SELECT COUNT(*) AS nbCommentaries FROM commentary';
+
+  $resultat = $connexion->query($requete);
+  $resultat->setFetchMode(PDO::FETCH_ASSOC);
+  $ligne = $resultat->fetch(PDO::FETCH_ASSOC);
+
+  return (int)$ligne['nbCommentaries'];
+}
 
 ?>

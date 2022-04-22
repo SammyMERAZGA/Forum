@@ -1,6 +1,7 @@
 <div class="titlePost">
   <?php
-  echo '<h1>'. $post['title'] .'</h1>';
+  echo '<h1 class="text-center">'. $post['title'] .'</h1>';
+  echo '<h3 class="alinea">'. $post['message'] .'</h3>';
   ?>
 </div>
 
@@ -17,7 +18,7 @@ foreach($allCommentary as $commentary)
   }
 }else{
   echo '<div>
-          <h2>Aucun commentaire</h2> 
+          <h2 class="text-center">Aucun commentaire</h2>
         </div>';
 }
 ?>
@@ -34,7 +35,7 @@ foreach($allCommentary as $commentary)
 if($action === "addCommentary")
 {
   echo '<div>
-          <p>Votre commentaire à bien été ajouté</p>
+          <p>Votre commentaire à bien été ajouté !</p>
         </div>';
 }
 if(isset($_SESSION['theUserEmail'])) {
