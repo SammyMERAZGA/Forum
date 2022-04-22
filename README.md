@@ -6,6 +6,8 @@
 
 ## <div align="center"> Languages & Tools 🛠 </div>
 
+<div align="center">
+ 
 ![PHP](https://img.shields.io/badge/-php-05122A?style=flat&logo=php)&nbsp;
 ![HTML](https://img.shields.io/badge/-html5-05122A?style=flat&logo=html5)&nbsp;
 ![CSS](https://img.shields.io/badge/-css3-05122A?style=flat&logo=css3)&nbsp;
@@ -21,6 +23,8 @@
 ![Postman](https://img.shields.io/badge/-Postman-05122A?style=flat&logo=postman)&nbsp;
 ![MAMP](https://img.shields.io/badge/-MAMP-05122A?style=flat&logo=mamp)&nbsp;
 ![Apache](https://img.shields.io/badge/-Apache-05122A?style=flat&logo=apache)&nbsp;
+  
+</div>
 
 ### Nommer le fichier : Merazga Sammy - M'Madi Soilihi
 
