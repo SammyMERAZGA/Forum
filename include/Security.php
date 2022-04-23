@@ -44,6 +44,11 @@ function openUserSession($email) {
   $_SESSION['theUserType'] = $userInfo['admin'];
 }
 
+// function updateUserInfosSession()
+// {
+
+// }
+
 function isOpenUserSession() {
   return isset($_SESSION['utilPseudo']);
 }

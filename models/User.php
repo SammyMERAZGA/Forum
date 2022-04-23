@@ -59,7 +59,7 @@ function getAllUsers()
 }
 
 // Update user
-function setUser($lastname, $firstname, $pseudo, $email, $password, $user_id)
+function updateUser($lastname, $firstname, $pseudo, $email, $user_id)
 {
   try
   {
@@ -70,9 +70,28 @@ function setUser($lastname, $firstname, $pseudo, $email, $password, $user_id)
             . '", firstname = "' . $firstname
             . '", pseudo = "' . $pseudo
             . '", email = "' . $email
-            . '", password = "' . $password
             . '" WHERE user_id = ' . $user_id;
     $resultat = $connexion->query($requete);
+  }
+  catch (PDOException $e)
+  {
+    echo 'Erreur !: ' . $e->getMessage() . '<br />';
+    exit();
+  }
+return $resultat;
+}
+
+// Update user
+function updateUserPwd($user_id, $newPassword)
+{
+  try
+  {
+      $connexion = SGBDConnect();
+
+      $requete = 'UPDATE user'
+              . ' SET password = "'. $newPassword
+              . '" WHERE user_id = ' . $user_id;
+      $resultat = $connexion->query($requete);
   }
   catch (PDOException $e)
   {

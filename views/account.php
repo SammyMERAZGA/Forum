@@ -1,4 +1,26 @@
 <div class="container">
+  <?php
+    if($action === 'updateUserInfos')
+    {
+      if($resultat === true)
+      {
+        echo '<div><p>Vos informations ont bien été modifié</p></div>';
+      }else
+      {
+        echo '<div><p>Le mot de passe est incorrect</p></div>';
+      }
+    }
+    if($action === 'updateUserPwd')
+    {
+      if($resultat === true)
+      {
+        echo '<div><p>Votre Mot de passe à bien été modifié</p></div>';
+      }else
+      {
+        echo '<div><p>Le mot de passe initial est incorrect</p></div>';
+      }
+    }
+  ?>
   <form class="accountForm" method="POST">
     <div class="accountContainer">
       <h2>Modifier vos informations</h2>
@@ -15,12 +37,8 @@
       <label for="lastname">Nom</label>
       <input id="lastname" name="lastname" class="inputAccount" type="text" placeholder="Changer le nom de famille" value="<?php echo($_SESSION['theUserLastname']); ?>">
 
-
-      <!-- <label for="newMdp">Nouveau mot de passe</label>
-      <input id="newMdp" name="newMdp" class="inputAccount" type="password" placeholder="nouveau mot de passe">
-
-      <label for="mdp">Mot de passe actuel*</label>
-      <input id="mdp" name="mdp" class="inputAccount" type="password" placeholder="confirmer les modification" required> -->
+      <label for="mdp">Mot de passe*</label>
+      <input id="mdp" name="mdp" class="inputAccount" type="password" placeholder="confirmer les modification" required>
 
       <input type="hidden" id="action" name="action" value="updateUserInfos">
       <button id="accountSubmit" name="accountSubmit" class="inputAccount" type="submit" >Modifier les informations</button>
