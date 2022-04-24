@@ -10,6 +10,7 @@ $action = $_REQUEST['action'];
 switch($action)
 {
   case 'admin': {
+    $session_user_id = $_SESSION['theUserId'];
     $allUsers = getAllUsers();
     $allPosts = getAllPost();
     $allCommentaries = getAllCommentaries();
@@ -19,6 +20,7 @@ switch($action)
 
   case 'deleteUser': {
     deleteUser($_REQUEST['user_id']);
+    $session_user_id = $_SESSION['theUserId'];
     $allUsers = getAllUsers();
     $allPosts = getAllPost();
     $allCommentaries = getAllCommentaries();
@@ -28,6 +30,7 @@ switch($action)
 
   case 'deletePost': {
     deletePost($_REQUEST['post_id']);
+    $session_user_id = $_SESSION['theUserId'];
     $allUsers = getAllUsers();
     $allPosts = getAllPost();
     $allCommentaries = getAllCommentaries();
@@ -37,6 +40,7 @@ switch($action)
 
   case 'deleteCommentary': {
     deleteCommentary($_REQUEST['commentary_id']);
+    $session_user_id = $_SESSION['theUserId'];
     $allUsers = getAllUsers();
     $allPosts = getAllPost();
     $allCommentaries = getAllCommentaries();
@@ -46,6 +50,7 @@ switch($action)
 
   default :
   {
+    $session_user_id = $_SESSION['theUserId'];
     $allUsers = getAllUsers();
     $allPosts = getAllPost();
     $allCommentaries = getAllCommentaries();

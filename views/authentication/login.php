@@ -1,3 +1,15 @@
+<?php
+if($action === 'valideInscription')
+{
+  echo '<div class="success valideInscription"><p>Vous avez bien été inscrit, connectez-vous!</p></div>';
+}
+
+if($action === 'erreurConnexion')
+{
+  echo '<div class="error erreurConnexion"><p>Adresse e-mail ou mot de passe incorrect !</p></div>';
+}
+?>
+
 <form method="POST">
   <div id="containerRegister">
     <h1 class="text-center">Connexion</h1>
@@ -16,13 +28,3 @@
     <a href="index.php">Mot de passe oublié</a>
   </div> -->
 </form>
-
-<?php
-if($action === 'valideInscription'){
-  echo '<div><p>Vous avez bien été inscrit, connectez-vous!</p></div>';
-}
-
-if($action === 'erreurConnexion'){
-  echo '<div><p>Adresse e-mail ou mot de passe incorrect !</p></div>';
-}
-?>

@@ -3,7 +3,7 @@
 require_once ("./models/database/DataSource.php");
 
 // add md5 for hash password
-function inscription(/*$nickName, */$email, $password)
+function inscription($email, $password)
 {
   try
   {

@@ -26,7 +26,7 @@ switch($action)
     else
     {
       $action = 'erreurConnexion';
-      include("views/error.php");
+      include("views/authentication/login.php");
     }
     break;
   }
@@ -40,11 +40,6 @@ switch($action)
 
     case 'valideInscription':
       {
-        $email = $_REQUEST["email"];
-        $mdp = $_REQUEST["psw"];
-        require_once("models/Authentication.php");
-        inscription($email, $mdp);
-        $action = $_REQUEST["action"];
         include("views/authentication/login.php");
         break;
       }

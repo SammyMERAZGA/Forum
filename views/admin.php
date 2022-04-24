@@ -22,7 +22,10 @@
             <p>Le commentaire a bien été supprimé</p>
           </div>';
   }
-  foreach ($allUsers as $user) {
+  foreach ($allUsers as $user)
+  {
+    if($user['user_id'] !== $session_user_id)
+    {
 ?>
   <div class="postMessage">
     <?php
@@ -34,7 +37,10 @@
       echo '<hr class="divider">';
     ?>
   </div>
-<?php } ?>
+<?php
+    }
+  }
+?>
 
 <h1 class="text-center blue-text">Liste des posts :</h1>
 <hr class="divider">

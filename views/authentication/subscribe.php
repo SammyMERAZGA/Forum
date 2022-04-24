@@ -1,3 +1,14 @@
+<?php
+  if($existEmail)
+  {
+    echo '<div class="error existEmail"><p>Ce compte existe déjà</p></div>';
+  }
+  if($errorPSW)
+  {
+    echo '<div class="error errorPSW"><p>Le mot de passe et le mot de passe confirmé n\'ont pas la même valeur</p></div>';
+  }
+?>
+
 <form method="POST">
   <div id="containerRegister">
     <h1 class="text-center">Inscription</h1>
@@ -11,8 +22,8 @@
     <label for="psw-repeat"><b>Confirmer votre mot de passe</b></label>
     <input id="psw-repeat" type="password" placeholder="Confirmer votre mot de passe" name="psw-repeat" required>
 
-    <input type="hidden" id="action" name="action" value="valideInscription">
-    <input type="hidden" id="uc" name="uc" value="login">
+    <input type="hidden" id="action" name="action" value="subscribeTest">
+    <input type="hidden" id="uc" name="uc" value="subscribe">
     <input type="submit" class="registerbtn" name="btnSubmit" id="btnSubmit" value="S'inscrire">
   </div>
 
