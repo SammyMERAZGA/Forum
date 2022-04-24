@@ -4,7 +4,7 @@ function SGBDConnect() // Connexion à la base de données
 {
   try
   {
-    $connexion = new PDO('mysql:host=localhost;dbname=forum', 'sammy', 'root');
+    $connexion = new PDO('mysql:host=localhost;dbname=forum', 'root', '');
     $connexion->query('SET NAMES UTF8');
     $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   }
